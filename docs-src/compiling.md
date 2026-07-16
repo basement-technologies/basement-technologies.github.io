@@ -1,8 +1,3 @@
----
-title: Compiling to C
-permalink: /docs/compiling/
----
-
 # Compiling to C
 
 Running Douglang through the interpreter is fun, but sometimes you want a "real" executable. Our very qualified scientists at **Basement Technologies Inc** learned how to translate Douglang into C.

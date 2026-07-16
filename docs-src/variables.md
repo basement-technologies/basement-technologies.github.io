@@ -8,7 +8,7 @@ Doug set "goot"
 
 Let's explain that code block. At first glance, it might look like variables. Trust me, it's not. What this is actually doing is indexing a signed array and setting its value to "goot". Yes, you read that right: a signed array. Our scientists were hard at work finding a solution to the modern problem of variables, and this is what they made.
 
-So, what the hell even is a signed array? Well, you know how arrays are indexed like `#!_ my_array[i]`? Well, we thought that it's kinda stupid for indices to only be positive (unsigned). So we poured all of our channel points into developing a new array with negative indices. That means `#!_ array[-10]` is correct. However, Douglang doesn't use that *old*, *smelly*, *decrepit* syntax. Instead, you use ***Doug Notation***! Cue applause.
+So, what the hell even is a signed array? Well, you know how arrays are indexed like `my_array[i]`? Well, we thought that it's kinda stupid for indices to only be positive (unsigned). So we poured all of our channel points into developing a new array with negative indices. That means `array[-10]` is correct. However, Douglang doesn't use that *old*, *smelly*, *decrepit* syntax. Instead, you use ***Doug Notation***! Cue applause.
 
 Doug Notation is really quite simple. You write `#!douglang Doug`. That's it.
 
@@ -20,7 +20,7 @@ Doug
 
 What index is that? It's obviously 1. Because there's only one Doug.
 
-Doug Notation is similar to Brainfuck's `#!_ <` and `#!_ >`. Don't worry, it's very simple. It only has three rules.
+Doug Notation is similar to Brainfuck's `<` and `>`. Don't worry, it's very simple. It only has three rules.
 
 1. **Chained Dougs:** Jump count, in powers of two. `#!douglang Doug` is 1, `#!douglang DougDoug` is 2, `#!douglang DougDougDoug` is 4, `#!douglang DougDougDougDoug` is 8, and so on.
 
@@ -30,7 +30,7 @@ Doug Notation is similar to Brainfuck's `#!_ <` and `#!_ >`. Don't worry, it's v
     - Odd chains: Perform addition.
     - Even chains: Perform subtraction.
 
-    So, `#!douglang DougDoug Doug` performs `#!_ + 2 - 1` on the index. Or, more simply, is equivalent to just writing `#!douglang Doug`.
+    So, `#!douglang DougDoug Doug` performs `+ 2 - 1` on the index. Or, more simply, is equivalent to just writing `#!douglang Doug`.
 
 Simple, right? With that in mind, getting to 11:
 
@@ -57,7 +57,7 @@ That sets the 0th index's value to `#!douglang "goot"`. Because `#!douglang set`
 * `#!douglang /set`
 * `#!douglang %set`
 
-Note, these do not work like `#!_ +`, `#!_ -`, etc in other languages. They work exactly like `#!douglang set`, except instead of overwriting the value stored at the index, they perform an operation on it. And, that's everything about variables. Or, actually, I'm getting word from the technicians at **Basement Technologies Inc** that there's actually one thing left: Doug Expressions.
+Note, these do not work like `+`, `-`, etc in other languages. They work exactly like `#!douglang set`, except instead of overwriting the value stored at the index, they perform an operation on it. And, that's everything about variables. Or, actually, I'm getting word from the technicians at **Basement Technologies Inc** that there's actually one thing left: Doug Expressions.
 
 Doug Expressions look exactly like regular Doug Notation, with two differences:
 
