@@ -8,4 +8,4 @@ tts "Hey Doug"
 
 The `#!douglang tts` keyword reads it out. Significantly better than printing.
 
-To run this program, run `douglang hello.doug` in your terminal.
+To run this program, run `douglang hello.doug` in your terminal, which will start the interpreter for Douglang.
