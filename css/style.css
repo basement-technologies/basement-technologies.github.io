@@ -1,0 +1,304 @@
+@font-face {
+    font-family: "Chaparral Pro";
+    src: url("../assets/ChaparralPro-Bold.woff") format("woff");
+    font-weight: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+img {
+    pointer-events: none;
+}
+
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: "Chaparral Pro", Georgia, serif;
+    color: #111;
+
+    background:
+        linear-gradient(rgba(30, 20, 10, 0.25),
+            rgba(30, 20, 10, 0.45)),
+        url("../assets/background.png");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+/* Main board layout */
+
+.board-grid {
+    flex: 1;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 850px));
+
+    justify-content: center;
+    align-content: center;
+
+    gap: clamp(25px, 4vw, 70px);
+
+    padding: clamp(20px, 4vw, 50px);
+
+    section:nth-child(1) {
+        transform: translate(-20px, 10px) rotate(-1deg);
+    }
+
+    section:nth-child(2) {
+        transform: translate(10px, -20px) rotate(-1deg);
+    }
+
+    section:nth-child(3) {
+        transform: translate(30px, 20px) rotate(-1.5deg);
+    }
+
+    section:nth-child(4) {
+        transform: translate(-10px, -30px) rotate(0.5deg);
+    }
+}
+
+
+/* Blackboard */
+
+.blackboard {
+    position: relative;
+
+    width: 100%;
+    max-width: 850px;
+}
+
+
+.blackboard>img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    user-select: none;
+    pointer-events: none;
+}
+
+
+/* Content over board */
+
+.board-content {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Logo */
+
+.logo-board .board-content {
+    gap: .5rem;
+
+    padding: 7%;
+}
+
+
+.logo-board #logo {
+    width: 100%;
+    height: auto;
+}
+
+
+.logo-board #pepper {
+    width: 28%;
+    height: auto;
+
+    transform: translateY(-10%);
+}
+
+
+/* Flavor text */
+
+.blackboard p {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 80%;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+
+    color: rgb(191, 191, 191);
+
+    text-shadow:
+        0 4px 5px rgba(0, 0, 0, .4);
+
+    font-size: clamp(1rem, 2.5vw, 2.4rem);
+}
+
+
+/* Links */
+
+.links {
+    flex-direction: column;
+
+    gap: clamp(10px, 2vw, 25px);
+}
+
+
+.links a {
+    color: #E6DBBA;
+
+    text-decoration: underline;
+
+    font-size: clamp(1.5rem, 3.5vw, 3.5rem);
+
+    text-shadow:
+        0 4px 5px rgba(0, 0, 0, .4);
+}
+
+
+.links a:nth-child(1) {
+    transform: rotate(-2deg);
+}
+
+
+.links a:nth-child(2) {
+    transform: rotate(1deg);
+}
+
+
+/* Code */
+
+.code-wrapper {
+    padding: 6% 8%;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+.code-wrapper pre {
+    width: 100%;
+    height: auto;
+
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+
+    font-size: clamp(.45rem, 1vw, 1.5rem);
+    line-height: 1.25;
+
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+
+    text-shadow:
+        0 2px 3px rgba(0, 0, 0, .8);
+}
+
+
+.code-wrapper code {
+    display: block;
+
+    font-family:
+        "Courier New",
+        Consolas,
+        monospace;
+}
+
+
+/* Face */
+
+.dface {
+    position: absolute;
+
+    top: 7%;
+    right: 7%;
+
+    width: clamp(35px, 7vw, 75px);
+    height: auto;
+
+    object-fit: contain;
+
+    z-index: 2;
+
+    filter:
+        drop-shadow(0 3px 3px rgba(0, 0, 0, .5));
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+
+    padding: 20px;
+
+    color: #555;
+
+    font-size: clamp(.75rem, 1.5vw, 1rem);
+}
+
+
+/* Tablet */
+
+@media (max-width: 1200px) {
+
+    .board-grid {
+        grid-template-columns: minmax(0, 850px);
+    }
+
+
+    .code-wrapper pre {
+        font-size: clamp(.55rem, 1.8vw, .9rem);
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .board-grid {
+        gap: 20px;
+        padding: 15px;
+    }
+
+
+    .code-wrapper {
+        padding: 7%;
+    }
+
+
+    .code-wrapper pre {
+        font-size: .55rem;
+        line-height: 1.2;
+    }
+
+
+    .blackboard p {
+        width: 85%;
+    }
+
+
+    footer {
+        padding: 15px;
+    }
+}

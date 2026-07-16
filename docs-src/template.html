@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Uses ../../ before all paths because this template is used for /docs/<slug>/index.html -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ title }} | Douglang</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/docs.css">
+    <link rel="preload" href="/assets/pepper_peek.webp" as="image">
+</head>
+
+<body>
+
+    <header class="topbar">
+
+        <a class="brand" href="/index.html">
+            <img id="pepper" src="/assets/pepper.png">
+            <img id="logo" src="/assets/douglang.png">
+        </a>
+
+        <a class="github"
+           href="https://github.com/basement-technologies/Douglang">
+            GitHub
+        </a>
+
+    </header>
+
+    <main class="layout">
+
+        <aside class="sidebar">
+
+            <nav>
+                <ul>
+                    {% for page in pages %}
+                    <li>
+                        <a
+                            href="{{ page.url }}"
+                            {% if page.url == current_page %}class="active"{% endif %}
+                        >
+                            {{ page.title }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+
+        </aside>
+
+        <article class="content">
+            {{ content | safe }}
+        </article>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="/js/index.js"></script>
+
+</body>
+
+</html>

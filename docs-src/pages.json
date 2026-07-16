@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Introduction",
+        "file": "introduction.md"
+    },
+    {
+        "title": "Hey Doug",
+        "file": "hey_doug.md"
+    },
+    {
+        "title": "Variables",
+        "file": "variables.md"
+    },
+    {
+        "title": "Control Flow",
+        "file": "control_flow.md"
+    },
+    {
+        "title": "FFI",
+        "file": "ffi.md"
+    },
+    {
+        "title": "Compiling",
+        "file": "Compiling.md"
+    }
+]
