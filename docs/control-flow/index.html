@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Uses ../../ before all paths because this template is used for /docs/<slug>/index.html -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> | Douglang</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/docs.css">
+    <link rel="preload" href="/assets/pepper_peek.webp" as="image">
+</head>
+
+<body>
+
+    <header class="topbar">
+
+        <a class="brand" href="/index.html">
+            <img id="pepper" src="/assets/pepper.png">
+            <img id="logo" src="/assets/douglang.png">
+        </a>
+
+        <a class="github"
+           href="https://github.com/basement-technologies/Douglang">
+            GitHub
+        </a>
+
+    </header>
+
+    <main class="layout">
+
+        <aside class="sidebar">
+
+            <nav>
+                <ul>
+                    
+                    <li>
+                        <a
+                            href="/docs/introduction/"
+                            
+                        >
+                            Introduction
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a
+                            href="/docs/hey-doug/"
+                            
+                        >
+                            Hey Doug
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a
+                            href="/docs/variables/"
+                            
+                        >
+                            Variables
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a
+                            href="/docs/control-flow/"
+                            
+                        >
+                            Control Flow
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a
+                            href="/docs/ffi/"
+                            
+                        >
+                            FFI
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a
+                            href="/docs/compiling/"
+                            
+                        >
+                            Compiling
+                        </a>
+                    </li>
+                    
+                </ul>
+            </nav>
+
+        </aside>
+
+        <article class="content">
+            <h1>Control Flow</h1>
+<p>Douglang is designed to be the bleeding edge of programming languages. As such, we provide only the best control flow features.</p>
+<p>To loop, say <code class="language-douglang">loop</code>. Confusing, I know. Don't worry, I believe in you.</p>
+<pre><code class="language-douglang">loop [
+    tts &quot;I'm going to say this forever.&quot;
+]
+</code></pre>
+<p>Loops go forever. Why do they go forever? Because if they didn't loop, they wouldn't be a <code class="language-douglang">loop</code>. You can end a loop with <code class="language-douglang">guoD</code>:</p>
+<pre><code class="language-douglang">loop [
+    tts &quot;What is my purpose? Just to loop? Forever?&quot;
+    guoD D: Oh, thank you. :D
+]
+</code></pre>
+<p>Except now it doesn't loop and therefore doesn't deserve to be called <code class="language-douglang">loop</code>. We can fix this with predictions. </p>
+<pre><code class="language-douglang">prediction (Doug) = &quot;Douglas Wreden&quot; [
+    Believers win [
+        tts &quot;Hey Doug&quot;
+    ]
+]
+</code></pre>
+<p>And, what's that? <code>=</code> is for assignment? No, This is Douglang. We use <code class="language-douglang">set</code> for assignment. That frees up <code>=</code> for conditionals, instead of the <em>disgusting</em> and <em>vulgar</em> <code>==</code>.</p>
+<p>The <code class="language-douglang">Believers win</code> block runs whenever the condition is true, because the Believers believe it will evaluate to true, and they won. The same would happen with a <code class="language-douglang">Doubters win</code> block, because the Doubters believe it will evaluate to false.</p>
+<p>Combine that with <code class="language-douglang">loop</code> and now you have a loop that doesn't go on forever. I don't know why you would want that, because loops going forever is cool.</p>
+<pre><code class="language-douglang">D: Laundry alarm :D
+Doug set 5
+loop [
+    Bald set &quot;Laundry in &quot; +set (Doug) +set &quot;.&quot; tts
+    Doug -set 1
+    prediction (Doug) = 0 [
+        Believers win [
+            gouD
+        ]
+    ]
+]
+tts &quot;LAUNDRY!!!!!!!&quot; 
+</code></pre>
+        </article>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="/js/index.js"></script>
+
+</body>
+
+</html>

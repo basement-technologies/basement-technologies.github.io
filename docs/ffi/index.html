@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Uses ../../ before all paths because this template is used for /docs/<slug>/index.html -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> | Douglang</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/docs.css">
+    <link rel="preload" href="/assets/pepper_peek.webp" as="image">
+</head>
+
+<body>
+
+    <header class="topbar">
+
+        <a class="brand" href="/index.html">
+            <img id="pepper" src="/assets/pepper.png">
+            <img id="logo" src="/assets/douglang.png">
+        </a>
+
+        <a class="github"
+           href="https://github.com/basement-technologies/Douglang">
+            GitHub
+        </a>
+
+    </header>
+
+    <main class="layout">
+
+        <aside class="sidebar">
+
+            <nav>
+                <ul>
+                    
+                    <li>
+                        <a
+                            href="/docs/introduction/"
+                            
+                        >
+                            Introduction
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a
+                            href="/docs/hey-doug/"
+                            
+                        >
+                            Hey Doug
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a
+                            href="/docs/variables/"
+                            
+                        >
+                            Variables
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a
+                            href="/docs/control-flow/"
+                            
+                        >
+                            Control Flow
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a
+                            href="/docs/ffi/"
+                            
+                        >
+                            FFI
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a
+                            href="/docs/compiling/"
+                            
+                        >
+                            Compiling
+                        </a>
+                    </li>
+                    
+                </ul>
+            </nav>
+
+        </aside>
+
+        <article class="content">
+            <h1>FFI</h1>
+<p>Sometimes people are weak minded individuals who refuse to take advantage of Douglang's superiority over every other language. As such, we allow function calls to C. This is rigged, and it is named that way.</p>
+<pre><code class="language-douglang">Rigged &quot;puts&quot; &quot;Hey Doug&quot;
+</code></pre>
+<p>This prints out "Hey Doug". But that's lame, and tts is better.</p>
+<h2>Arguments</h2>
+<p>Arguments follow the function name. They can be:</p>
+<ul>
+<li>String or number literals: <code class="language-douglang">Rigged "sleep" 1</code></li>
+<li>Doug expressions in parentheses: <code class="language-douglang">Rigged "puts" (Doug)</code></li>
+</ul>
+<pre><code class="language-douglang">Doug set &quot;Hey Doug, why is chat so slow&quot;
+Rigged &quot;puts&quot; (Doug)
+</code></pre>
+        </article>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="/js/index.js"></script>
+
+</body>
+
+</html>
