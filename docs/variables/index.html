@@ -101,13 +101,13 @@
 <pre><code class="language-douglang">Doug set &quot;goot&quot;
 </code></pre>
 <p>Let's explain that code block. At first glance, it might look like variables. Trust me, it's not. What this is actually doing is indexing a signed array and setting its value to "goot". Yes, you read that right: a signed array. Our scientists were hard at work finding a solution to the modern problem of variables, and this is what they made.</p>
-<p>So, what the hell even is a signed array? Well, you know how arrays are indexed like <code>#!_ my_array[i]</code>? Well, we thought that it's kinda stupid for indices to only be positive (unsigned). So we poured all of our channel points into developing a new array with negative indices. That means <code>#!_ array[-10]</code> is correct. However, Douglang doesn't use that <em>old</em>, <em>smelly</em>, <em>decrepit</em> syntax. Instead, you use <strong><em>Doug Notation</em></strong>! Cue applause.</p>
+<p>So, what the hell even is a signed array? Well, you know how arrays are indexed like <code>my_array[i]</code>? Well, we thought that it's kinda stupid for indices to only be positive (unsigned). So we poured all of our channel points into developing a new array with negative indices. That means <code>array[-10]</code> is correct. However, Douglang doesn't use that <em>old</em>, <em>smelly</em>, <em>decrepit</em> syntax. Instead, you use <strong><em>Doug Notation</em></strong>! Cue applause.</p>
 <p>Doug Notation is really quite simple. You write <code class="language-douglang">Doug</code>. That's it.</p>
 <p>So:</p>
 <pre><code class="language-douglang">Doug
 </code></pre>
 <p>What index is that? It's obviously 1. Because there's only one Doug.</p>
-<p>Doug Notation is similar to Brainfuck's <code>#!_ &lt;</code> and <code>#!_ &gt;</code>. Don't worry, it's very simple. It only has three rules.</p>
+<p>Doug Notation is similar to Brainfuck's <code>&lt;</code> and <code>&gt;</code>. Don't worry, it's very simple. It only has three rules.</p>
 <ol>
 <li>
 <p><strong>Chained Dougs:</strong> Jump count, in powers of two. <code class="language-douglang">Doug</code> is 1, <code class="language-douglang">DougDoug</code> is 2, <code class="language-douglang">DougDougDoug</code> is 4, <code class="language-douglang">DougDougDougDoug</code> is 8, and so on.</p>
@@ -121,7 +121,7 @@
 <li>Odd chains: Perform addition.</li>
 <li>Even chains: Perform subtraction.</li>
 </ul>
-<p>So, <code class="language-douglang">DougDoug Doug</code> performs <code>#!_ + 2 - 1</code> on the index. Or, more simply, is equivalent to just writing <code class="language-douglang">Doug</code>.</p>
+<p>So, <code class="language-douglang">DougDoug Doug</code> performs <code>+ 2 - 1</code> on the index. Or, more simply, is equivalent to just writing <code class="language-douglang">Doug</code>.</p>
 </li>
 </ol>
 <p>Simple, right? With that in mind, getting to 11:</p>
@@ -144,7 +144,7 @@ DougDoug D: -2. Now at 11 :D
 <li><code class="language-douglang">/set</code></li>
 <li><code class="language-douglang">%set</code></li>
 </ul>
-<p>Note, these do not work like <code>#!_ +</code>, <code>#!_ -</code>, etc in other languages. They work exactly like <code class="language-douglang">set</code>, except instead of overwriting the value stored at the index, they perform an operation on it. And, that's everything about variables. Or, actually, I'm getting word from the technicians at <strong>Basement Technologies Inc</strong> that there's actually one thing left: Doug Expressions.</p>
+<p>Note, these do not work like <code>+</code>, <code>-</code>, etc in other languages. They work exactly like <code class="language-douglang">set</code>, except instead of overwriting the value stored at the index, they perform an operation on it. And, that's everything about variables. Or, actually, I'm getting word from the technicians at <strong>Basement Technologies Inc</strong> that there's actually one thing left: Doug Expressions.</p>
 <p>Doug Expressions look exactly like regular Doug Notation, with two differences:</p>
 <ol>
 <li>They're in parenthesis</li>
